@@ -1,8 +1,9 @@
 " savesigns.vim - Vim global plugin for saving Signs
 " -------------------------------------------------------------
-" Last Change: 2010, Feb 25
+" Last Change: Sat, 16 Feb 2013 23:09:15 +0100
+
 " Maintainer:  Christian Brabandt <cb@256bit.org>
-" Version:     0.3
+" Version:     0.4
 " Copyright:   (c) 2009 by Christian Brabandt
 "              The VIM LICENSE applies to histwin.vim 
 "              (see |copyright|) except use "savesigns.vim" 
@@ -100,7 +101,7 @@ fun! <sid>CreateSignFiles(fname, force)
 	else
 	    exe ":sp" filename
 	endif
-	%d
+	%d _
 
 	call append('.', [ '" Source this file, to reload all signs',
 		    \'" Signs that are defined for files which are currently not loaded',
@@ -136,4 +137,4 @@ endfun
 " Restore:"{{{
 let &cpo=s:cpo
 unlet s:cpo"}}}
-" vim: ts=4 sts=4 fdm=marker com+=l\:\" spell spelllang=en
+" vim: ts=4 sts=4 fdm=marker com+=l\:\"
